@@ -1,8 +1,8 @@
 package org.example.seminar.Models;
 
 import jakarta.persistence.*;
-
 import java.util.Random;
+
 
 @Entity
 @Table(name = "students")

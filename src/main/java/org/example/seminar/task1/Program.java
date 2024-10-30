@@ -12,9 +12,9 @@ public class Program {
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/";
+        String url = "jdbc:mysql://students.db:3306/";
         String user = "root";
-        String password = "password";
+        String password = "123";
 
         // Подключение к базе данных
         try (Connection connection = DriverManager.getConnection(url, user, password);){
@@ -84,7 +84,7 @@ public class Program {
     }
 
     private static void useDatabase(Connection connection) throws SQLException {
-        String useDatabase = "USE studentDB;";
+        String useDatabase = "USE studentsDB;";
         try (PreparedStatement statement = connection.prepareStatement(useDatabase)) {
             statement.execute();
         }
